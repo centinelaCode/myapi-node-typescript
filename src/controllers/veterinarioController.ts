@@ -6,6 +6,7 @@ import { handleHttp } from '../utils/error.handle';
 const registrarVeterinario = async({ body }: Request, res: Response) => {
   try {
     const { name, email, password} = body;
+    
     // verificamos que email | password | name contengan datos
     if(name && email && password) {    
       // Verifificamos si existe el email  
